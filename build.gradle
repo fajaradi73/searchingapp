@@ -1,0 +1,30 @@
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.google.gms:google-services:4.2.0'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://dl.bintray.com/glomadrian/maven' }
+        maven { url 'https://maven.fabric.io/public' }
+        mavenCentral()
+    }
+
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
